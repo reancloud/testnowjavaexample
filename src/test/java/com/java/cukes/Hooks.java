@@ -226,13 +226,10 @@ public class Hooks {
 	@After
 	public void afterEach(Scenario scenario) {
 		try {
-			if (scenario.isFailed()) {
 				scenario.write("Current Page URL is " + driver.getCurrentUrl());
 				byte[] screenshot = ((TakesScreenshot) driver)
 						.getScreenshotAs(OutputType.BYTES);
 				scenario.embed(screenshot, "image/png");
-
-			}
 			String isUPA = System.getenv(Constants.IS_UPA);
 			if ("true".equalsIgnoreCase(isUPA)) {
 				String scenarioName = scenario.getName().replace(" ", "_");
