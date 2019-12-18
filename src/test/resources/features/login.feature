@@ -1,5 +1,5 @@
 # File Name: checkout.feature
-# Copyright 2015, Opex Software
+# Copyright 2020, Hitachi Vantara Corporation
 # Apache License, Version 2.0
 # This file contains cucumber steps for login and registration related scenarios
 
